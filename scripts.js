@@ -22,31 +22,36 @@ function loadFileInto(fromFile, whereTo) {
 
 }
 
+// New Recipe Object
+function Recipe (recipeName, ContributorName, ImageURL, ingredientsURL, equipmentURL, directionsURL) 
+{
 
-
+  this.recipeName = recipeName;
+  this.contributor = ContributorName;
+  this.ImageURL= ImageURL;
+  this.ingredients = ingredientsURL;
+  this.equipment = equipmentURL;
+  this.directions = directionsURL;
+  
+  this.displayRecipe = function()
+  {
+    document.querySelector("#TitleBanner h1").innerHTML = this.recipeName;
+    document.querySelector("#contributor").innerHTML = this.contributor;
+    document.querySelector("#TitleBanner").style.backroundImage = "url(" + this.ImageURL + ")";
+    LoadFileInto(this.ingredients, "#ingredients ul");
+      LoadFileInto(this.equipment, "#equipment ul");
+      LoadFileInto(this.directions, "#directions ol");
+  }
+  
+}
+BananaCreamPie = new Recipe("Banana Cream Pie", "Logan Gilliam","https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F43%2F2022%2F05%2F18%2F3355919-banana-cream-pie-ReneePaj-1x1-1.jpg", "ingredients.html", "equipment.html","directions.html" );
 
 
 window.onload = function() {
-   loadFileInto("ingredients.html","#ingredients ul");
-   loadFileInto("equipment.html","#equipment ul");
-   loadFileInto("directions.html","#directions ol");
-
-  document.querySelector("#TitleBanner h1").classList.add("tp");
-  document.querySelector("#TitleBanner h1").onclick = function() {
-    this.classList.toggle("black");
+  document.querySelector("#firstRecipe").onclick = function(){
+    BananaCreamPie.displayRecipe();
   }
-  document.querySelector("#Recipe_columns #ingredients").onclick = function() {
-    this.classList.toggle("TPshow");
-  }
-  document.querySelector("#Recipe_columns #directions").onclick = function() {
-    this.classList.toggle("TPshow");
-  }
-  document.querySelector("#Recipe_columns #equipment").onclick = function() {
-    this.classList.toggle("TPshow");
-  }
-  document.querySelector("#Recipe_columns #equipment ul").innerHTML += "<li>Room For Dessert</li>"; //Inner HTML requirement
   
- 
   
-}//end of function
+};//end of function
 
