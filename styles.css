@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box;
+}
+
+#TitleBanner {
+  Position: relative;
+  Width: 100%;
+  Height: 50vh;
+  Background-image: url(https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F43%2F2022%2F05%2F18%2F3355919-banana-cream-pie-ReneePaj-1x1-1.jpg);
+  background-size: cover;
+  Background-position: center center;
+  box-shadow: 0px 3px 3px rgba(0,0,0,0.7);
+}
+#TitleBanner h1 {
+  color: Gold;
+ text-transform: uppercase;
+  font-size: 500%;
+  padding: 0;
+  margin: 0 0 2vw 2vw;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-shadow: 0px 8px 8px black;
+  line-height: 80%;
+}
+  #TitleBanner h1.tp{
+  font-size: 250%;
+}
+  #TitleBanner h1.black{
+    color: black;
+     text-shadow: 0px 8px 8px white;
+    
+  }
+
+
+#Recipe_columns {
+  padding: 2vh;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 6vh;
+  background-color: moccasin;
+}
+#Recipe_columns #ingredients ul, #Recipe_columns #directions ol, #Recipe_columns #equipment ul {display: none};
+#Footer{
+  background-color: burlywood;
+  text-align: center;
+}
+#Recipe_columns #ingredients.TPshow ul {
+  display: block;
+}
+#Recipe_columns #directions.TPshow ol {
+  display: block;
+}
+#Recipe_columns #equipment.TPshow ul {
+  display: block;
+}
+div {
+  display: block;
+  width: 100vw;
+  padding: 1vw;
+}
+ul, ol{
+  display: block;
+}
+body {
+  background-color:Moccasin;
+  padding: 0;
+  margin: 0;
+  font-family: Apple Chancery, cursive;
+}
+
+@media screen and (orientation: portrait) {
+ 
+  #Recipe_columns {
+    padding: 1vh 2vh 2vh 2vh;
+    display: block;
+    
+  #Recipe_columns div{
+    posiiton: relative;
+    margin: 2.5vh 0 5vh 0;
+    font-size:120%;
+  } 
+ 
+}
+@media screen and (orientation: portrait) and (max-width: 575px) {
+  
+  
+  #titleBanner {
+    height: 98vh;
+  }
+  
+
+  #titleBanner h1 {
+    font-size: 900%;
+    margin: 0 0 3vh 3vh;
+  }
+ 
+  
+}
