@@ -23,12 +23,12 @@ function loadFileInto(fromFile, whereTo) {
 }
 
 // New Recipe Object
-function Recipe (recipeName, ContributorName, ImageURL, ingredientsURL, equipmentURL, directionsURL) 
+function Recipe(recipeName, ContributorName, imageURL, ingredientsURL, equipmentURL, directionsURL) 
 {
 
   this.recipeName = recipeName;
   this.contributor = ContributorName;
-  this.ImageURL= ImageURL;
+  this.imageURL = imageURL;
   this.ingredients = ingredientsURL;
   this.equipment = equipmentURL;
   this.directions = directionsURL;
@@ -37,10 +37,10 @@ function Recipe (recipeName, ContributorName, ImageURL, ingredientsURL, equipmen
   {
     document.querySelector("#TitleBanner h1").innerHTML = this.recipeName;
     document.querySelector("#contributor").innerHTML = this.contributor;
-    document.querySelector("#TitleBanner").style.backroundImage = "url(" + this.ImageURL + ")";
-    LoadFileInto(this.ingredients, "#ingredients ul");
-      LoadFileInto(this.equipment, "#equipment ul");
-      LoadFileInto(this.directions, "#directions ol");
+    document.querySelector("#TitleBanner").style.backgroundImage = "url(" + this.ImageURL + ")";
+    loadFileInto(this.ingredients, "#ingredients ul");
+      loadFileInto(this.equipment, "#equipment ul");
+      loadFileInto(this.directions, "#directions ol");
   }
   
 }
