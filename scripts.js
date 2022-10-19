@@ -37,7 +37,7 @@ function Recipe(recipeName, ContributorName, imageURL, ingredientsURL, equipment
   {
     document.querySelector("#TitleBanner h1").innerHTML = this.recipeName;
     document.querySelector("#contributor").innerHTML = this.contributor;
-    document.querySelector("#TitleBanner").style.backgroundImage = "url(" + this.ImageURL + ")";
+    document.querySelector("#TitleBanner").style.backgroundImage = "url(" + this.imageURL + ")";
     loadFileInto(this.ingredients, "#ingredients ul");
       loadFileInto(this.equipment, "#equipment ul");
       loadFileInto(this.directions, "#directions ol");
@@ -49,8 +49,8 @@ BananaCreamPie = new Recipe("Banana Cream Pie", "Logan Gilliam","https://imagesv
 
 window.onload = function() {
   document.querySelector("#firstRecipe").onclick = function(){
-    BananaCreamPie.displayRecipe();
-  }
+    BananaCreamPie.displayRecipe();  }
+
   
   
 };//end of function
